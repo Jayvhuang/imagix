@@ -1,0 +1,27 @@
+# Imagix — Free Online Image Toolkit
+
+Imagix is a free, browser-based image toolkit. All processing runs locally in the
+user's browser using JavaScript and the Canvas API; images are never uploaded to a server.
+
+## Supported output formats
+- PNG: lossless, supports alpha (transparency).
+- JPEG: lossy, no alpha channel; smallest file size for photos.
+- WebP: supports both lossy and lossless, supports alpha; smaller than PNG at similar quality.
+
+## Tools and how they work
+- Resize: new dimension = original × (scale / 100). Aspect-ratio lock keeps width/height
+  proportional: height = width × (origH / origW).
+- Compress: savings %% = (1 − outputBytes / originalBytes) × 100 for lossy formats.
+  PNG is re-encoded losslessly, so it may not shrink.
+- Convert: re-encodes the image into PNG, JPEG or WebP.
+- Crop: selects a rectangular source region defined by (x, y, width, height) in source pixels.
+- Rotate: rotating 90° swaps dimensions: newWidth = oldHeight, newHeight = oldWidth.
+- Watermark: draws text with selectable position (9 anchors), font size (px), color and
+  opacity (0–100%).
+- Image to Base64: encodes image bytes as a base64 Data URL; size ≈ 1.37 × binary size.
+- Filters: brightness(%), contrast(%), saturate(%), grayscale(%), sepia(%), invert(%), blur(px).
+
+## Privacy
+Images are processed on-device. No image content is transmitted to Imagix servers.
+Third-party partners (Google AdSense, Amazon Associates) may set cookies, web beacons and
+collect IP addresses for ads and attribution. See privacy.html.
