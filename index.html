@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imagix — Free Online Image Tools: Resize, Compress, Convert, Crop & More</title>
+<meta name="description" content="Free online image tools that run 100% in your browser. Resize, compress, convert, crop, rotate, watermark and filter images with no upload and no sign-up.">
+<link rel="canonical" href="https://imagix.com/">
+<link rel="alternate" hreflang="en" href="https://imagix.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://imagix.com/?lang=zh">
+<link rel="alternate" hreflang="x-default" href="https://imagix.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Imagix — Free Online Image Tools">
+<meta property="og:description" content="Resize, compress, convert, crop, rotate, watermark and filter images — free, in your browser.">
+<meta property="og:url" content="https://imagix.com/">
+<meta property="og:image" content="https://imagix.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Imagix — Free Online Image Tools">
+<meta name="twitter:description" content="Resize, compress, convert, crop, rotate, watermark and filter images — free, in your browser.">
+<meta name="twitter:image" content="https://imagix.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Google AdSense (Auto Ads) — commented placeholder. Replace ca-pub-XXXXXXXXXXXXXX with your real ID and uncomment after approval. Do NOT add manual <ins> ad units. -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Imagix",
+  "url":"https://imagix.com/",
+  "description":"Free online image tools: resize, compress, convert, crop, rotate, watermark and filter images in the browser.",
+  "inLanguage":["en","zh-CN"],
+  "potentialAction":{"@type":"SearchAction","target":"https://imagix.com/?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Resize Image","url":"https://imagix.com/#tool-resize"},
+    {"@type":"ListItem","position":2,"name":"Compress Image","url":"https://imagix.com/#tool-compress"},
+    {"@type":"ListItem","position":3,"name":"Convert Image Format","url":"https://imagix.com/#tool-convert"},
+    {"@type":"ListItem","position":4,"name":"Crop Image","url":"https://imagix.com/#tool-crop"},
+    {"@type":"ListItem","position":5,"name":"Rotate & Flip Image","url":"https://imagix.com/#tool-rotate"},
+    {"@type":"ListItem","position":6,"name":"Add Watermark","url":"https://imagix.com/#tool-watermark"},
+    {"@type":"ListItem","position":7,"name":"Image to Base64","url":"https://imagix.com/#tool-base64"},
+    {"@type":"ListItem","position":8,"name":"Image Filters & Effects","url":"https://imagix.com/#tool-filter"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Imagix",
+  "url":"https://imagix.com/",
+  "logo":"https://imagix.com/favicon.svg",
+  "sameAs":[]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Is Imagix free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every tool on Imagix is completely free and requires no account or sign-up."}},
+    {"@type":"Question","name":"Do you upload my images to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All image processing happens locally in your browser using JavaScript and the Canvas API. Your images never leave your device."}},
+    {"@type":"Question","name":"Which image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"Imagix can output PNG, JPEG and WebP. It accepts all common browser-supported input image formats."}},
+    {"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No account or registration is required. Open a tool and start editing immediately."}}
+  ]
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand"><span class="logo">🖼️</span><span class="name">Imagix</span></div>
+    <span class="tagline" data-i18n="tagline"></span>
+    <span class="spacer"></span>
+    <div class="ctrl">
+      <button class="btn-ghost" data-i18n="lang.btn" aria-label="language toggle">中文</button>
+      <button class="btn-ghost" data-i18n="theme.btn" aria-label="theme toggle">Dark</button>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar">
+  <div class="wrap"><div class="grid">
+    <button class="tab active" data-tool="resize"><span class="ico">📐</span><span data-i18n="nav.resize">Resize</span></button>
+    <button class="tab" data-tool="compress"><span class="ico">🗜️</span><span data-i18n="nav.compress">Compress</span></button>
+    <button class="tab" data-tool="convert"><span class="ico">🔄</span><span data-i18n="nav.convert">Convert</span></button>
+    <button class="tab" data-tool="crop"><span class="ico">✂️</span><span data-i18n="nav.crop">Crop</span></button>
+    <button class="tab" data-tool="rotate"><span class="ico">↻</span><span data-i18n="nav.rotate">Rotate</span></button>
+    <button class="tab" data-tool="watermark"><span class="ico">💧</span><span data-i18n="nav.watermark">Watermark</span></button>
+    <button class="tab" data-tool="base64"><span class="ico">#️⃣</span><span data-i18n="nav.base64">Base64</span></button>
+    <button class="tab" data-tool="filter"><span class="ico">🎨</span><span data-i18n="nav.filter">Filter</span></button>
+  </div></div>
+</nav>
+
+<main class="wrap">
+  <section class="hero">
+    <h1 data-i18n="hero.title">Imagix — Free Online Image Tools</h1>
+    <p data-i18n="hero.sub">Resize, compress, convert, crop, rotate, watermark and filter images. 100% in your browser — no upload, no sign-up.</p>
+    <div class="pill" data-i18n="hero.pill">Free · No sign-up · <b>Private</b> (processed on your device)</div>
+  </section>
+
+  <!-- RESIZE -->
+  <section class="panel active" id="tool-resize">
+    <h2>📐 <span data-i18n="t.resize">Resize Image</span></h2>
+    <p class="lead" data-i18n="t.resize.lead">Scale your image to exact pixel dimensions or a percentage, with aspect-ratio lock.</p>
+    <div class="card">
+      <div class="drop" id="resize-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="resize-file" accept="image/*"></div>
+      <div class="controls">
+        <div class="field"><label data-i18n="lbl.width">Width (px)</label><input type="number" id="resize-w" min="1" value="100"></div>
+        <div class="field"><label data-i18n="lbl.height">Height (px)</label><input type="number" id="resize-h" min="1" value="100"></div>
+        <div class="field"><label data-i18n="lbl.scale">Scale (%)</label><input type="number" id="resize-scale" min="1" max="1000" value="100"></div>
+        <div class="field"><label class="check"><input type="checkbox" id="resize-lock" checked> <span data-i18n="lbl.lock">Lock aspect ratio</span></label></div>
+        <div class="field"><label data-i18n="lbl.format">Format</label>
+          <select id="resize-fmt"><option value="png">PNG</option><option value="jpeg" selected>JPEG</option><option value="webp">WebP</option></select></div>
+        <div class="field"><label data-i18n="lbl.quality">Quality</label><input type="range" id="resize-q" min="10" max="100" value="92"></div>
+      </div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="resize-canvas"></canvas>
+        <div class="row"><button class="btn" id="resize-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="resize-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPRESS -->
+  <section class="panel" id="tool-compress">
+    <h2>🗜️ <span data-i18n="t.compress">Compress Image</span></h2>
+    <p class="lead" data-i18n="t.compress.lead">Shrink file size while keeping quality. See before/after size and savings.</p>
+    <div class="card">
+      <div class="drop" id="compress-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="compress-file" accept="image/*"></div>
+      <div class="controls">
+        <div class="field"><label data-i18n="lbl.format">Format</label>
+          <select id="compress-fmt"><option value="png">PNG</option><option value="jpeg" selected>JPEG</option><option value="webp">WebP</option></select></div>
+        <div class="field"><label data-i18n="lbl.quality">Quality</label><input type="range" id="compress-q" min="10" max="100" value="80"></div>
+      </div>
+      <div class="row"><button class="btn" id="compress-run" data-i18n="btn.apply">Apply</button></div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="compress-canvas"></canvas>
+        <div class="row"><button class="btn" id="compress-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="compress-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONVERT -->
+  <section class="panel" id="tool-convert">
+    <h2>🔄 <span data-i18n="t.convert">Convert Image</span></h2>
+    <p class="lead" data-i18n="t.convert.lead">Switch between PNG, JPEG and WebP in one click.</p>
+    <div class="card">
+      <div class="drop" id="convert-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="convert-file" accept="image/*"></div>
+      <div class="controls">
+        <div class="field"><label data-i18n="lbl.format">Format</label>
+          <select id="convert-fmt"><option value="png" selected>PNG</option><option value="jpeg">JPEG</option><option value="webp">WebP</option></select></div>
+        <div class="field"><label data-i18n="lbl.quality">Quality</label><input type="range" id="convert-q" min="10" max="100" value="92" disabled></div>
+      </div>
+      <div class="row"><button class="btn" id="convert-run" data-i18n="btn.apply">Apply</button></div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="convert-canvas"></canvas>
+        <div class="row"><button class="btn" id="convert-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="convert-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CROP -->
+  <section class="panel" id="tool-crop">
+    <h2>✂️ <span data-i18n="t.crop">Crop Image</span></h2>
+    <p class="lead" data-i18n="t.crop.lead">Draw a selection on your image and cut out exactly what you need.</p>
+    <div class="card">
+      <div class="drop" id="crop-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="crop-file" accept="image/*"></div>
+      <div class="out">
+        <div class="crop-wrap hidden" id="crop-wrap">
+          <canvas id="crop-display"></canvas>
+          <div class="crop-sel hidden" id="crop-sel"><span class="h tl"></span><span class="h tr"></span><span class="h bl"></span><span class="h br"></span></div>
+        </div>
+        <div class="crop-read" id="crop-read"></div>
+        <div class="row"><button class="btn" id="crop-run" data-i18n="btn.apply">Apply</button></div>
+        <canvas id="crop-canvas" class="hidden"></canvas>
+        <div class="row"><button class="btn" id="crop-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="crop-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROTATE -->
+  <section class="panel" id="tool-rotate">
+    <h2>↻ <span data-i18n="t.rotate">Rotate &amp; Flip</span></h2>
+    <p class="lead" data-i18n="t.rotate.lead">Rotate 90° or flip horizontally / vertically. Undo any time with Reset.</p>
+    <div class="card">
+      <div class="drop" id="rotate-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="rotate-file" accept="image/*"></div>
+      <div class="row">
+        <button class="btn secondary" id="rotate-cw">↻ 90°</button>
+        <button class="btn secondary" id="rotate-ccw">↺ 90°</button>
+        <button class="btn secondary" id="rotate-flipH">⇋ Flip H</button>
+        <button class="btn secondary" id="rotate-flipV">⇕ Flip V</button>
+        <button class="btn secondary" id="rotate-reset" data-i18n="btn.reset">Reset</button>
+      </div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="rotate-canvas"></canvas>
+        <div class="row"><button class="btn" id="rotate-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="rotate-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WATERMARK -->
+  <section class="panel" id="tool-watermark">
+    <h2>💧 <span data-i18n="t.watermark">Add Watermark</span></h2>
+    <p class="lead" data-i18n="t.watermark.lead">Stamp text onto your image with adjustable position, size, color and opacity.</p>
+    <div class="card">
+      <div class="drop" id="wm-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="watermark-file" accept="image/*"></div>
+      <div class="controls">
+        <div class="field"><label data-i18n="lbl.text">Text</label><input type="text" id="wm-text" value="© Imagix" maxlength="60"></div>
+        <div class="field"><label data-i18n="lbl.position">Position</label>
+          <select id="wm-pos">
+            <option value="tl" data-i18n="pos.tl">Top-left</option>
+            <option value="tc" data-i18n="pos.tc">Top-center</option>
+            <option value="tr" data-i18n="pos.tr">Top-right</option>
+            <option value="ml" data-i18n="pos.ml">Middle-left</option>
+            <option value="mc" selected data-i18n="pos.mc">Center</option>
+            <option value="mr" data-i18n="pos.mr">Middle-right</option>
+            <option value="bl" data-i18n="pos.bl">Bottom-left</option>
+            <option value="bc" data-i18n="pos.bc">Bottom-center</option>
+            <option value="br" data-i18n="pos.br">Bottom-right</option>
+          </select></div>
+        <div class="field"><label data-i18n="lbl.size">Font size (px)</label><input type="number" id="wm-size" min="8" max="200" value="36"></div>
+        <div class="field"><label data-i18n="lbl.color">Color</label><input type="color" id="wm-color" value="#ffffff"></div>
+        <div class="field"><label data-i18n="lbl.opacity">Opacity</label><input type="range" id="wm-opacity" min="10" max="100" value="70"></div>
+      </div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="wm-canvas"></canvas>
+        <div class="row"><button class="btn" id="wm-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="wm-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BASE64 -->
+  <section class="panel" id="tool-base64">
+    <h2>#️⃣ <span data-i18n="t.base64">Image to Base64</span></h2>
+    <p class="lead" data-i18n="t.base64.lead">Turn an image into a Data URL, or decode a Data URL back into an image.</p>
+    <div class="card">
+      <div class="drop" id="b64-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="base64-file" accept="image/*"></div>
+      <div class="field" style="margin-top:14px"><label data-i18n="lbl.text">Image → Data URL</label>
+        <textarea id="b64-out" rows="4" readonly placeholder="data:image/png;base64,..."></textarea></div>
+      <div class="row"><button class="btn secondary" id="b64-copy" data-i18n="btn.copy">Copy</button></div>
+      <div class="field" style="margin-top:14px"><label data-i18n="lbl.text">Data URL → Image</label>
+        <textarea id="b64-in" rows="4" placeholder="data:image/png;base64,..."></textarea></div>
+      <div class="row"><button class="btn" id="b64-decode" data-i18n="btn.decode">Preview</button></div>
+      <div class="out"><canvas id="b64-img" class="hidden"></canvas></div>
+      <div class="info" id="b64-info" data-i18n="info.nofile">Upload an image to get started.</div>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section class="panel" id="tool-filter">
+    <h2>🎨 <span data-i18n="t.filter">Filters &amp; Effects</span></h2>
+    <p class="lead" data-i18n="t.filter.lead">Apply brightness, contrast, saturation, grayscale, sepia, invert and blur live.</p>
+    <div class="card">
+      <div class="drop" id="flt-drop"><span data-i18n="drop.hint">Click to choose an image, or drag &amp; drop here</span><input type="file" id="filter-file" accept="image/*"></div>
+      <div class="controls">
+        <div class="field"><label data-i18n="lbl.brightness">Brightness</label><input type="range" id="flt-brightness" min="0" max="200" value="100"></div>
+        <div class="field"><label data-i18n="lbl.contrast">Contrast</label><input type="range" id="flt-contrast" min="0" max="200" value="100"></div>
+        <div class="field"><label data-i18n="lbl.saturate">Saturation</label><input type="range" id="flt-saturate" min="0" max="200" value="100"></div>
+        <div class="field"><label data-i18n="lbl.grayscale">Grayscale</label><input type="range" id="flt-grayscale" min="0" max="100" value="0"></div>
+        <div class="field"><label data-i18n="lbl.sepia">Sepia</label><input type="range" id="flt-sepia" min="0" max="100" value="0"></div>
+        <div class="field"><label data-i18n="lbl.invert">Invert</label><input type="range" id="flt-invert" min="0" max="100" value="0"></div>
+        <div class="field"><label data-i18n="lbl.blur">Blur (px)</label><input type="range" id="flt-blur" min="0" max="20" value="0"></div>
+      </div>
+      <div class="row"><button class="btn secondary" id="flt-reset" data-i18n="btn.reset">Reset</button></div>
+      <div class="out">
+        <div class="out-head"><span class="title" data-i18n="out.title">Result</span></div>
+        <canvas id="flt-canvas"></canvas>
+        <div class="row"><button class="btn" id="flt-dl" data-i18n="btn.download">Download</button></div>
+        <div class="info" id="flt-info" data-i18n="info.nofile">Upload an image to get started.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATE -->
+  <section class="card" style="margin-bottom:18px">
+    <h2 style="margin-top:0" data-i18n="affil.title">Recommended gear &amp; tools</h2>
+    <div class="affil">
+      <a href="https://www.amazon.com/s?k=graphics+drawing+tablet&tag=imagix-20" rel="sponsored nofollow noopener" target="_blank"><span class="em">🎨</span>Drawing tablets</a>
+      <a href="https://www.amazon.com/s?k=4k+photo+monitor&tag=imagix-20" rel="sponsored nofollow noopener" target="_blank"><span class="em">🖥️</span>Photo monitors</a>
+      <a href="https://www.amazon.com/s?k=external+ssd+1tb&tag=imagix-20" rel="sponsored nofollow noopener" target="_blank"><span class="em">💾</span>Storage SSDs</a>
+      <a href="https://www.amazon.com/s?k=camera+lens+cleaning+kit&tag=imagix-20" rel="sponsored nofollow noopener" target="_blank"><span class="em">🧼</span>Cleaning kits</a>
+    </div>
+    <p class="disclose" data-i18n="disclose">As an Amazon Associate, Imagix earns from qualifying purchases.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Imagix</strong> · <span data-i18n="footer.note">Imagix is a free toolkit. Images are processed locally in your browser and are never uploaded to a server.</span></div>
+    <div class="links">
+      <a href="privacy.html" data-i18n="privacy.link">Privacy Policy</a>
+    </div>
+    <div class="cr">© 2026 Imagix. Free image tools for everyone.</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
